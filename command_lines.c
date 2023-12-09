@@ -5,8 +5,8 @@
 /**
  * main - a function that prints an argument and reverse
  * the user name
- * @argv: is a NULL terminated array of strings
- * @argc: is the number of items in av
+ * @argv: this is a NULL terminated array of strings
+ * @argc: it is the number of items in argv
  *
  * Return: 0 as success
  */
@@ -30,6 +30,6 @@ int main(int argc, char *argv[])
 		str[i] = str[len - 1 - i];
 		str[len - 1 - i] = temp;
 	}
-	printf("Your name in reverse is: %s ", str);
+	printf("Your name in reverse is: %s \n", str);
 	return (0);
 }
