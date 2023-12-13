@@ -39,4 +39,4 @@ void receptor(char *arg, size_t vol)
 		}
 	}
 	arg[strcspn(arg, "\n")] = '\0';
-i
+}
