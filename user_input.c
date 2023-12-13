@@ -1,7 +1,7 @@
 #include "protoshell.h"
 
 /**
- * receptor - a function that collect and run
+ * receptor - a function that collect and run command
  * @arg: the arguments passed
  * @vol: the number of arguments passed
  */
@@ -27,12 +27,16 @@ void receptor(char *arg, size_t vol)
 
 	first_input = strtok(arg, " ");
 	second_input = strtok(NULL, " ");
-	if (strcmp(first_input,"exit") == 0) {
-		if (second_input != NULL){
+	if (strcmp(first_input, "exit") == 0)
+	{
+		if (second_input != NULL)
+		{
 			exit(atoi(second_input));
-		} else {
+		}
+		else
+		{
 			exit(0);
 		}
 	}
 	arg[strcspn(arg, "\n")] = '\0';
-}
+i
