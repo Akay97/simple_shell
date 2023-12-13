@@ -21,5 +21,8 @@ void receptor(char *arg, size_t vol)
 			exit(EXIT_FAILURE);
 		}
 	}
+	if (strcmp(arg,"exit\n") == 0) {
+		exit(0);
+	}
 	arg[strcspn(arg, "\n")] = '\0';
 }
