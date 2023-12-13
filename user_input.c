@@ -8,6 +8,9 @@
 
 void receptor(char *arg, size_t vol)
 {
+	char *first_input;
+	char *second_input;
+
 	if (fgets(arg, vol, stdin) == NULL)
 	{
 		if (feof(stdin))
@@ -21,8 +24,15 @@ void receptor(char *arg, size_t vol)
 			exit(EXIT_FAILURE);
 		}
 	}
-	if (strcmp(arg,"exit\n") == 0) {
-		exit(0);
+
+	first_input = strtok(arg, " ");
+	second_input = strtok(NULL, " ");
+	if (strcmp(first_input,"exit") == 0) {
+		if (second_input != NULL){
+			exit(atoi(second_input));
+		} else {
+			exit(0);
+		}
 	}
 	arg[strcspn(arg, "\n")] = '\0';
 }
