@@ -2,6 +2,7 @@
 
 /**
  * exit_program - a function that print an exit
+ * Return: 0 as success
  */
 
 int exit_program(void)
