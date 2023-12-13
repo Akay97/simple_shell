@@ -17,5 +17,4 @@ void implementor(const char *input);
 void receptor(char *arg, size_t vol);
 void inplementor1(const char *input);
 
-#endif
-
+#endif /*prpotoshell*/
